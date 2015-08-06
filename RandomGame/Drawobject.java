@@ -1,13 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 public abstract class Drawobject{
-    private double x,y,width,height;
-    
-    public Drawobject(double x,double y,double width,double height){
+    protected double x,y,width,height;
+    protected Scene scene;
+    public Drawobject(double x,double y,double width,double height,Scene scene){
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        this.scene = scene;
     }
     
     public double getX(){

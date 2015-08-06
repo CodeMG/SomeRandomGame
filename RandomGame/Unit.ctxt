@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=x\ y\ width\ height
-comment0.target=Unit(double,\ double,\ double,\ double)
+comment0.params=x\ y\ width\ height\ scene
+comment0.target=Unit(double,\ double,\ double,\ double,\ Scene)
 comment1.params=g\ panel
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
 numComments=2

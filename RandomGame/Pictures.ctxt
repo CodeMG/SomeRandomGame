@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Pictures()
+comment1.params=d\ name
+comment1.target=boolean\ accept(java.io.File,\ java.lang.String)
+comment2.params=d\ name
+comment2.target=boolean\ accept(java.io.File,\ java.lang.String)
+comment3.params=pfad
+comment3.target=java.awt.image.BufferedImage\ bildHinzufuegen(java.lang.String)
+comment4.params=image\ x\ y\ b\ h
+comment4.target=java.awt.image.BufferedImage\ bildZerlegen(java.awt.image.BufferedImage,\ int,\ int,\ int,\ int)
+comment5.params=index
+comment5.target=int\ getHintergrundBilderHoeheAnzahl(int)
+comment6.params=
+comment6.target=java.lang.String[]\ getOrdner()
+comment7.params=
+comment7.target=java.awt.image.BufferedImage[][][][]\ getSprites()
+comment8.params=
+comment8.target=char[]\ getSpeicherCode()
+comment9.params=code\ zahl
+comment9.target=java.awt.image.BufferedImage\ getSprite(char,\ int)
+numComments=10

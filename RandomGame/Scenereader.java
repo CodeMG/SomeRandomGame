@@ -1,33 +1,46 @@
+import java.io.*;
 
-/**
- * Write a description of class Scenereader here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Scenereader
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class SceneReader{
 
-    /**
-     * Constructor for objects of class Scenereader
-     */
-    public Scenereader()
-    {
-        // initialise instance variables
-        x = 0;
+    public SceneReader(){
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public Overworld createScene(String verz){
+        Overworld level = new Overworld();
+
+        try {
+            FileInputStream iostream = new FileInputStream(verz);
+            DataInputStream diostream = new DataInputStream(iostream);
+            try {
+                int breite = diostream.readInt();
+                int hoehe = diostream.readInt();
+                int anzahl=diostream.readInt();
+                for(int i=0;i<anzahl;i++){
+                    char read = diostream.readChar();
+                    int readZahl = diostream.readInt();
+                    int x = diostream.readInt(),y = diostream.readInt();
+
+                    switch(read){
+                        case 'F':
+                        level.addForeground(new Foreground(x,y,64,64,level,Pictures.getSprite(read,readZahl)));
+                        case 'S':
+                        switch(readZahl){
+
+                        }
+                        break;
+                        case 'E':
+                        break;
+                        case 'B':
+                        break;
+                    }
+                }   
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        } catch (FileNotFoundException e) {}
+
+        return level;
     }
 }
