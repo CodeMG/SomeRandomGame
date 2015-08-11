@@ -17,9 +17,6 @@ public abstract class Scene{
     }
     
     public void zeichnen(Graphics g,JPanel panel){
-        for(int i = 0; i < units.size();i++){
-            units.get(i).zeichnen(g,panel);
-        }
          for(int i = 0; i < background.size();i++){
             background.get(i).zeichnen(g,panel);
         }
@@ -31,6 +28,9 @@ public abstract class Scene{
         }
          for(int i = 0; i < specials.size();i++){
             specials.get(i).zeichnen(g,panel);
+        }
+        for(int i = 0; i < units.size();i++){
+            units.get(i).zeichnen(g,panel);
         }
     }
     

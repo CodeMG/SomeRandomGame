@@ -6,7 +6,7 @@ public class Frame extends JFrame{
     private Gamepanel panel;
     public Frame(){
         pack();
-        setSize(800,600);
+        setSize(64*13,64*10);
         setTitle("BLUB");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(3);
@@ -17,8 +17,8 @@ public class Frame extends JFrame{
 		int frameWidth = getWidth() - decorationWidth;
 		int frameHeight = getHeight() - decorationHeight;
 		
-		setSize(800+decorationWidth,600+decorationHeight);
-		panel = new Gamepanel(800,600);
+		setSize((64*13)+decorationWidth,(64*10)+decorationHeight);
+		panel = new Gamepanel(64*13,64*10);
 		panel.setVisible(true);
 		add(panel);
 		
