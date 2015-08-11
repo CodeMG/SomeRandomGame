@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=width\ height\ amountOfRooms\ type
+comment0.target=DungeonGenerator(int,\ int,\ int,\ int)
+comment1.params=
+comment1.target=Drawobject[][]\ getGrid()
+comment2.params=amountOfRooms
+comment2.target=void\ generateForest(int)
+comment3.params=room
+comment3.target=void\ addRoomToGrid(Room)
+comment4.params=room1\ room2
+comment4.target=void\ createPath(Room,\ Room)
+comment5.params=x1\ x2\ y
+comment5.target=void\ createHPath(int,\ int,\ int)
+comment6.params=y1\ y2\ x
+comment6.target=void\ createVPath(int,\ int,\ int)
+numComments=7

@@ -8,6 +8,7 @@ public class Obstacle extends Drawobject{
     }
     
     public void zeichnen(Graphics g,JPanel panel){
-        
+        g.setColor(Color.WHITE);
+        g.fillRect((int)x,(int)y,2,2);
     }
 }

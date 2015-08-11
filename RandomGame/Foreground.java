@@ -9,6 +9,8 @@ public class Foreground extends Drawobject{
     }
     
     public void zeichnen(Graphics g,JPanel panel){
-        g.drawImage(image,(int)(x),(int)(y),(int)(width),(int)(height),panel);
+        //g.drawImage(image,(int)(x),(int)(y),(int)(width),(int)(height),panel);
+        g.setColor(Color.GRAY);
+        g.fillRect((int)x,(int)y,2,2);
     }
 }
