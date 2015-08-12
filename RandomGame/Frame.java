@@ -10,7 +10,7 @@ public class Frame extends JFrame{
         setTitle("BLUB");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(3);
-        setResizable(false);
+        setResizable(true);
         
         int decorationWidth = getInsets().left + getInsets().right;
 		int decorationHeight = getInsets().top + getInsets().bottom;

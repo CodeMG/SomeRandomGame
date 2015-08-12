@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class Gamepanel extends JPanel{
     private Scene scene;
+    private int verschiebungX,verschiebungY;
     public Gamepanel(int width,int height){
         setSize(width,height);
         setBackground(Color.BLACK);
@@ -10,8 +11,14 @@ public class Gamepanel extends JPanel{
         new Pictures(); 
         new SceneManager();
         scene = SceneManager.getScenes().get(0);
-        scene.addUnit(new Player(64,64,64,64,scene));
         new Gameloop(this);
+        verschiebungX = -(int)(scene.getPlayer().getX());
+        verschiebungY = -(int)(scene.getPlayer().getY());
+    }
+    
+    public void berechnen(){
+        verschiebungX = -(int)(scene.getPlayer().getX());
+        verschiebungY = -(int)(scene.getPlayer().getY());
     }
     
     public void paintComponent(Graphics g){
@@ -23,8 +30,12 @@ public class Gamepanel extends JPanel{
             }
         }
         
-        scene.zeichnen(g,this);
+        scene.zeichnen(g,this,verschiebungX,verschiebungY);
         requestFocus();
+    }
+    
+    public Player getPlayer(){
+        return scene.getPlayer();
     }
     
     public Scene getScene(){

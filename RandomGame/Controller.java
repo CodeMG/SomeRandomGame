@@ -7,7 +7,7 @@ public class Controller implements KeyListener{
     }
     
     public void keyReleased(KeyEvent e){
-        Player player = (Player)panel.getScene().getUnits().get(0);
+        Player player = panel.getPlayer();
         if(player != null){
             if(e.getKeyCode() == KeyEvent.VK_D){
                
@@ -25,7 +25,7 @@ public class Controller implements KeyListener{
     }
     
     public void keyPressed(KeyEvent e){
-        Player player = (Player)panel.getScene().getUnits().get(0);
+        Player player = panel.getPlayer();
         if(player != null){
             if(e.getKeyCode() == KeyEvent.VK_D){
                player.moveRight();

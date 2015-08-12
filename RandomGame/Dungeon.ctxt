@@ -1,4 +1,8 @@
 #BlueJ class context
-comment0.params=width\ height
-comment0.target=Dungeon(int,\ int)
-numComments=1
+comment0.params=width\ height\ rooms
+comment0.target=Dungeon(int,\ int,\ int)
+comment1.params=
+comment1.target=Player\ getPlayer()
+comment2.params=g\ panel\ verschiebungX\ verschiebungY
+comment2.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
+numComments=3

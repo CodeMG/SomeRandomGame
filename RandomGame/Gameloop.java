@@ -10,7 +10,7 @@ public class Gameloop extends Thread{
     
     public void run(){
         while(true){
-            
+            panel.berechnen();
             panel.repaint();
             try{
                 sleep(100);

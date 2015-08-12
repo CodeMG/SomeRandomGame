@@ -27,6 +27,6 @@ public abstract class Drawobject{
         return height;
     }
     
-    public abstract void zeichnen(Graphics g,JPanel panel);
+    public abstract void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY);
         
 }

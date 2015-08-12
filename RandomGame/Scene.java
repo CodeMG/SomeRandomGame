@@ -16,21 +16,25 @@ public abstract class Scene{
         specials = new ArrayList<Special>();
     }
     
-    public void zeichnen(Graphics g,JPanel panel){
+    public Player getPlayer(){
+        return (Player)units.get(0);
+    }
+    
+    public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
          for(int i = 0; i < background.size();i++){
-            background.get(i).zeichnen(g,panel);
+            background.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
         }
          for(int i = 0; i < foreground.size();i++){
-            foreground.get(i).zeichnen(g,panel);
+            foreground.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
         }
          for(int i = 0; i < obstacles.size();i++){
-            obstacles.get(i).zeichnen(g,panel);
+            obstacles.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
         }
          for(int i = 0; i < specials.size();i++){
-            specials.get(i).zeichnen(g,panel);
+            specials.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
         }
         for(int i = 0; i < units.size();i++){
-            units.get(i).zeichnen(g,panel);
+            units.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
         }
     }
     

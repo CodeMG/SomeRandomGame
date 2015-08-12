@@ -7,7 +7,8 @@ public class SceneManager{
         scenes = new ArrayList<Scene>();
         
         reader = new SceneReader();
-        scenes.add(reader.createScene("level1.lvl"));
+        //scenes.add(reader.createScene("level1.lvl"));
+        scenes.add(new Dungeon(50,50,5));
     }
     
     public static ArrayList<Scene> getScenes(){

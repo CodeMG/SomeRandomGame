@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=x\ y\ width\ height\ scene\ image
 comment0.target=Foreground(double,\ double,\ double,\ double,\ Scene,\ java.awt.image.BufferedImage)
-comment1.params=g\ panel
-comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
+comment1.params=g\ panel\ verschiebungX\ verschiebungY
+comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
 numComments=2
