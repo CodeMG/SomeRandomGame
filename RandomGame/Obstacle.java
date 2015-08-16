@@ -9,6 +9,10 @@ public class Obstacle extends Drawobject{
     }
     
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX, int verschiebungY){
-        g.drawImage(image,(int)((x+verschiebungX)*width),(int)((y+verschiebungY)*height),(int)width,(int)height,panel);
+        g.drawImage(image,(int)((x)*width)+verschiebungX,(int)((y)*height)+verschiebungY,(int)width,(int)height,panel);
+    }
+    
+    public void calculate(){
+        
     }
 }

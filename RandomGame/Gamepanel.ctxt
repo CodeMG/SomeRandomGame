@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=Player\ getPlayer()
 comment4.params=
 comment4.target=Scene\ getScene()
-numComments=5
+comment5.params=
+comment5.target=int\ getGRIDSIZE()
+numComments=6

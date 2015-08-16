@@ -22,7 +22,7 @@ public class SceneReader{
 
                     switch(read){
                         case 'F':
-                        level.addForeground(new Foreground(x,y,64,64,level,Pictures.getSprite(read,readZahl)));
+                        level.addForeground(new Foreground(x,y,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),level,Pictures.getSprite(read,readZahl)));
                         case 'S':
                         switch(readZahl){
 

@@ -50,10 +50,10 @@ public class Pictures{
 
         for(int i = 0;i < sprites.length;i++){
             for(int j = 0; j < sprites[i].length;j++){
-                sprites[i][j] = new BufferedImage[bilder[i][j].getHeight()/64][bilder[i][j].getWidth()/64];
+                sprites[i][j] = new BufferedImage[bilder[i][j].getHeight()/Gamepanel.getGRIDSIZE()][bilder[i][j].getWidth()/Gamepanel.getGRIDSIZE()];
                 for(int w = 0; w < sprites[i][j].length;w++){
                     for(int k = 0; k < sprites[i][j][w].length;k++){
-                        sprites[i][j][w][k] = bildZerlegen(bilder[i][j],k*64,w*64,64,64);
+                        sprites[i][j][w][k] = bildZerlegen(bilder[i][j],k*Gamepanel.getGRIDSIZE(),w*Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE());
                     }
                 }
             }

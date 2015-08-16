@@ -11,4 +11,6 @@ comment4.params=
 comment4.target=double\ getHeight()
 comment5.params=g\ panel\ verschiebungX\ verschiebungY
 comment5.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
-numComments=6
+comment6.params=
+comment6.target=void\ calculate()
+numComments=7

@@ -3,14 +3,14 @@ import java.awt.*;
 import java.util.*;
 
 public class DungeonGenerator{
-    private Drawobject[][] gridObstacles;
-    private Drawobject[][] gridForeground;
+    private Obstacle[][] gridObstacles;
+    private Foreground[][] gridForeground;
     private ArrayList<Unit> gridUnits;
     private ArrayList<Room> rooms;
     private Scene scene;
     public DungeonGenerator(int width,int height,int amountOfRooms,int type,Scene scene){
-        gridObstacles = new Drawobject[width][height];
-        gridForeground = new Drawobject[width][height];
+        gridObstacles = new Obstacle[width][height];
+        gridForeground = new Foreground[width][height];
         gridUnits = new ArrayList<Unit>();
         rooms = new ArrayList<Room>();
         this.scene = scene;
@@ -19,11 +19,11 @@ public class DungeonGenerator{
         }
     }
 
-    public Drawobject[][] getGridObstacles(){
+    public Obstacle[][] getGridObstacles(){
         return gridObstacles;
     }
 
-    public Drawobject[][] getGridForeground(){
+    public Foreground[][] getGridForeground(){
         return gridForeground;
     }
 
@@ -35,13 +35,13 @@ public class DungeonGenerator{
 
         for(int i = 0; i < gridForeground.length;i++){
             for(int j = 0; j < gridForeground[i].length;j++){
-                gridForeground[i][j] = new Foreground(i,j,64,64,scene,Pictures.getSprite('F',13));
+                gridForeground[i][j] = new Foreground(i,j,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene,Pictures.getSprite('F',13));
             }
         }
         
         for(int i = 0; i < gridObstacles.length;i++){
             for(int j = 0; j < gridObstacles[i].length;j++){
-                gridObstacles[i][j] = new Obstacle(i,j,64,64,scene,Pictures.getSprite('O',0));
+                gridObstacles[i][j] = new Obstacle(i,j,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene,Pictures.getSprite('O',0));
             }
         }
         
@@ -80,7 +80,7 @@ public class DungeonGenerator{
             createPath(rooms.get(i),rooms.get(i+1));
         }
         int roomnumber = (int)(Math.random()*(amountOfRooms-1));
-        gridUnits.add(new Player(rooms.get(roomnumber).getCenterX(),rooms.get(roomnumber).getCenterY(),64,64,scene));
+        gridUnits.add(new Player(rooms.get(roomnumber).getCenterX()*Gamepanel.getGRIDSIZE(),rooms.get(roomnumber).getCenterY()*Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene));
     }
 
     public void addRoomToGrid(Room room){

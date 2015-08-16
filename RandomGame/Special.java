@@ -10,4 +10,8 @@ public class Special extends Drawobject{
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
         
     }
+    
+    public void calculate(){
+        
+    }
 }

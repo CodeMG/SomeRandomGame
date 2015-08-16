@@ -11,4 +11,8 @@ public class Background extends Drawobject{
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
         g.drawImage(image,(int)x+verschiebungX,(int)y+verschiebungY,(int)width,(int)height,panel);
     }
+    
+    public void calculate(){
+        
+    }
 }

@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Gamepanel extends JPanel{
+    private final static int GRIDSIZE = 64;
     private Scene scene;
     private int verschiebungX,verschiebungY;
     public Gamepanel(int width,int height){
@@ -19,14 +20,15 @@ public class Gamepanel extends JPanel{
     public void berechnen(){
         verschiebungX = -(int)(scene.getPlayer().getX());
         verschiebungY = -(int)(scene.getPlayer().getY());
+        getPlayer().calculate();
     }
     
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         
-        for(int i = 0; i < getWidth()/64;i++){
-            for(int j = 0; j < getHeight()/64;j++){
-                g.drawRect(i*64,j*64,64,64);
+        for(int i = 0; i < getWidth()/GRIDSIZE;i++){
+            for(int j = 0; j < getHeight()/GRIDSIZE;j++){
+                g.drawRect(i*GRIDSIZE,j*GRIDSIZE,GRIDSIZE,GRIDSIZE);
             }
         }
         
@@ -40,6 +42,10 @@ public class Gamepanel extends JPanel{
     
     public Scene getScene(){
         return scene;
+    }
+    
+    public static int getGRIDSIZE(){
+        return GRIDSIZE;
     }
     
 }

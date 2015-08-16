@@ -3,4 +3,6 @@ comment0.params=x\ y\ width\ height\ scene
 comment0.target=Special(double,\ double,\ double,\ double,\ Scene)
 comment1.params=g\ panel\ verschiebungX\ verschiebungY
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
-numComments=2
+comment2.params=
+comment2.target=void\ calculate()
+numComments=3

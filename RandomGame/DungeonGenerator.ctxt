@@ -2,9 +2,9 @@
 comment0.params=width\ height\ amountOfRooms\ type\ scene
 comment0.target=DungeonGenerator(int,\ int,\ int,\ int,\ Scene)
 comment1.params=
-comment1.target=Drawobject[][]\ getGridObstacles()
+comment1.target=Obstacle[][]\ getGridObstacles()
 comment2.params=
-comment2.target=Drawobject[][]\ getGridForeground()
+comment2.target=Foreground[][]\ getGridForeground()
 comment3.params=
 comment3.target=java.util.ArrayList\ getGridUnits()
 comment4.params=amountOfRooms

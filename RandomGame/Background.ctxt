@@ -3,4 +3,6 @@ comment0.params=x\ y\ width\ height\ scene\ image
 comment0.target=Background(double,\ double,\ double,\ double,\ Scene,\ java.awt.image.BufferedImage)
 comment1.params=g\ panel\ verschiebungX\ verschiebungY
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
-numComments=2
+comment2.params=
+comment2.target=void\ calculate()
+numComments=3
