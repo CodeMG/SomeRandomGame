@@ -13,33 +13,34 @@ public class Unit extends Drawobject{
     }
     
     public void calculate(){
+        System.out.print(x);
         if(moveRight){
-            xOffset+=Gamepanel.getGRIDSIZE()/4;
-            x+=Gamepanel.getGRIDSIZE()/4;
+            xOffset+=Gamepanel.getGRIDSIZE()/8;
+            x+=Gamepanel.getGRIDSIZE()/8;
             if(xOffset>=Gamepanel.getGRIDSIZE()){
                 moveRight = false;
                 xOffset = 0;
             }
         }
         else if(moveLeft){
-            xOffset-=Gamepanel.getGRIDSIZE()/4;
-            x-=Gamepanel.getGRIDSIZE()/4;
+            xOffset-=Gamepanel.getGRIDSIZE()/8;
+            x-=Gamepanel.getGRIDSIZE()/8;
             if(xOffset<=-Gamepanel.getGRIDSIZE()){
                 moveLeft = false;
                 xOffset = 0;
             }
         }
         else if(moveDown){
-            yOffset+=Gamepanel.getGRIDSIZE()/4;
-            y+=Gamepanel.getGRIDSIZE()/4;
+            yOffset+=Gamepanel.getGRIDSIZE()/8;
+            y+=Gamepanel.getGRIDSIZE()/8;
             if(yOffset>=Gamepanel.getGRIDSIZE()){
                 moveDown = false;
                 yOffset = 0;
             }
         }
         else if(moveUp){
-            yOffset-=Gamepanel.getGRIDSIZE()/4;
-            y-=Gamepanel.getGRIDSIZE()/4;
+            yOffset-=Gamepanel.getGRIDSIZE()/8;
+            y-=Gamepanel.getGRIDSIZE()/8;
             if(yOffset<=-Gamepanel.getGRIDSIZE()){
                 moveUp = false;
                 yOffset = 0;

@@ -13,7 +13,7 @@ public class Gameloop extends Thread{
             panel.berechnen();
             panel.repaint();
             try{
-                sleep(100);
+                sleep(10);
             }catch(Exception e){
                 
             }

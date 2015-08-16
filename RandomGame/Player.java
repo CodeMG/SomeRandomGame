@@ -10,7 +10,7 @@ public class Player extends Unit{
 
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
         g.setColor(Color.RED);
-        g.fillRect((int)6*Gamepanel.getGRIDSIZE(),(int)4*Gamepanel.getGRIDSIZE(),(int)width,(int)height);
+        g.fillRect((int)8*Gamepanel.getGRIDSIZE(),(int)6*Gamepanel.getGRIDSIZE(),(int)width,(int)height);
     }
 
 }

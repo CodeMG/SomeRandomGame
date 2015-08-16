@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Gamepanel extends JPanel{
-    private final static int GRIDSIZE = 64;
+    private final static int GRIDSIZE = 48;
     private Scene scene;
     private int verschiebungX,verschiebungY;
     public Gamepanel(int width,int height){
@@ -13,13 +13,13 @@ public class Gamepanel extends JPanel{
         new SceneManager();
         scene = SceneManager.getScenes().get(0);
         new Gameloop(this);
-        verschiebungX = -(int)(scene.getPlayer().getX());
-        verschiebungY = -(int)(scene.getPlayer().getY());
+        verschiebungX = -(int)(scene.getPlayer().getX()-(8*Gamepanel.getGRIDSIZE()));
+        verschiebungY = -(int)(scene.getPlayer().getY()-(6*Gamepanel.getGRIDSIZE()));
     }
     
     public void berechnen(){
-        verschiebungX = -(int)(scene.getPlayer().getX());
-        verschiebungY = -(int)(scene.getPlayer().getY());
+        verschiebungX = -(int)(scene.getPlayer().getX()-(8*Gamepanel.getGRIDSIZE()));
+        verschiebungY = -(int)(scene.getPlayer().getY()-(6*Gamepanel.getGRIDSIZE()));
         getPlayer().calculate();
     }
     
