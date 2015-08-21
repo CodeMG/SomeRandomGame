@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.util.*;
 public class Dungeon extends Scene{
+    private Minimap map;
     public Dungeon(int width,int height,int rooms){
         DungeonGenerator gen = new DungeonGenerator(width,height,rooms,1,this);
 
@@ -22,5 +23,12 @@ public class Dungeon extends Scene{
         }
         
         units = gen.getGridUnits();
+        
+        map = new Minimap(50,50,getObstacles());
+    }
+    
+    public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
+        super.zeichnen(g,panel,verschiebungX,verschiebungY);
+        map.zeichnen(g,panel);
     }
 }
