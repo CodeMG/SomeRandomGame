@@ -24,7 +24,7 @@ public class Dungeon extends Scene{
         
         units = gen.getGridUnits();
         
-        map = new Minimap(50,50,getObstacles());
+        map = new Minimap(50,50,getPlayer(),getObstacles(),getUnits());
     }
     
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){

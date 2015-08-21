@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=x\ y\ obstacles
-comment0.target=Minimap(int,\ int,\ java.util.ArrayList)
+comment0.params=x\ y\ player\ obstacles\ units
+comment0.target=Minimap(int,\ int,\ Player,\ java.util.ArrayList,\ java.util.ArrayList)
 comment1.params=g\ panel
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
 numComments=2
