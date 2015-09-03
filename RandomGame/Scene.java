@@ -3,14 +3,13 @@ import java.awt.*;
 import javax.swing.*;
 public abstract class Scene{
     protected ArrayList<Unit> units;
-    protected ArrayList<Background> background;
+    protected Background background;
     protected ArrayList<Foreground> foreground;
     protected ArrayList<Obstacle> obstacles;
     protected ArrayList<Special> specials;
     
     public Scene(){
         units = new ArrayList<Unit>();
-        background = new ArrayList<Background>();
         foreground = new ArrayList<Foreground>();
         obstacles = new ArrayList<Obstacle>();
         specials = new ArrayList<Special>();
@@ -21,8 +20,8 @@ public abstract class Scene{
     }
     
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
-         for(int i = 0; i < background.size();i++){
-            background.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
+         if(background != null){
+            background.zeichnen(g,panel,verschiebungX,verschiebungY);
         }
          for(int i = 0; i < foreground.size();i++){
             foreground.get(i).zeichnen(g,panel,verschiebungX,verschiebungY);
@@ -46,12 +45,12 @@ public abstract class Scene{
         units.add(unit);
     }
     
-    public ArrayList<Background> getBackground(){
+    public Background getBackground(){
         return background;
     }
     
-    public void addBackground(Background background){
-        this.background.add(background);
+    public void setBackground(Background background){
+        this.background=background;
     }
     
     public ArrayList<Foreground> getForeground(){

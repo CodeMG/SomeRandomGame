@@ -14,7 +14,6 @@ public class Unit extends Drawobject{
     }
 
     public void calculate(){
-        System.out.print(x);
         if(moveRight){
             xOffset+=Gamepanel.getGRIDSIZE()/8;
             x+=Gamepanel.getGRIDSIZE()/8;

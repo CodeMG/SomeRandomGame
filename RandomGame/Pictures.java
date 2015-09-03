@@ -6,6 +6,7 @@ public class Pictures{
     private static String[] ordner;
     private static char[] speicherCodes;
     private static BufferedImage bilder[][],sprites[][][][];// 4 DIMENSIONEN!!!!!!
+    private static BufferedImage forestBackground;
     public Pictures(){
         File dir = new File("Bilder");
         ordner = dir.list(new FilenameFilter() {
@@ -58,7 +59,8 @@ public class Pictures{
                 }
             }
         }
-
+        
+        forestBackground = bildHinzufuegen("Bilder//Background//forestBackground.png");
     }
 
     public BufferedImage bildHinzufuegen(String pfad){
@@ -134,4 +136,8 @@ public class Pictures{
         return img;
     }
 
+    public static BufferedImage getBackgroundForest(){
+        return forestBackground;
+    }
+    
 }

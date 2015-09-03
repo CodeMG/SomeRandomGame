@@ -3,19 +3,21 @@ import java.awt.*;
 import java.util.*;
 
 public class DungeonGenerator{
+    private Background background;
     private Obstacle[][] gridObstacles;
     private Foreground[][] gridForeground;
     private ArrayList<Unit> gridUnits;
     private ArrayList<Room> rooms;
     private Scene scene;
-    public DungeonGenerator(int width,int height,int amountOfRooms,int type,Scene scene){
+    public DungeonGenerator(int width,int height,int amountOfRooms,int sizeOfRooms,int type,Scene scene){
         gridObstacles = new Obstacle[width][height];
         gridForeground = new Foreground[width][height];
         gridUnits = new ArrayList<Unit>();
         rooms = new ArrayList<Room>();
         this.scene = scene;
         if(type == 1){
-            generateForest(amountOfRooms);
+            generateForest(amountOfRooms,sizeOfRooms);
+            background = new Background(scene,Pictures.getBackgroundForest());
         }
     }
 
@@ -31,7 +33,11 @@ public class DungeonGenerator{
         return gridUnits;
     }
 
-    public void generateForest(int amountOfRooms){
+    public Background getBackground(){
+        return background;
+    }
+    
+    public void generateForest(int amountOfRooms,int sizeOfRooms){
 
         for(int i = 0; i < gridForeground.length;i++){
             for(int j = 0; j < gridForeground[i].length;j++){
@@ -46,8 +52,8 @@ public class DungeonGenerator{
         }
         
         for(int i  = 0; i < amountOfRooms;i++){
-            int width = (int)((Math.random()*(gridForeground.length/10))+(gridForeground.length/10));
-            int height = (int)((Math.random()*(gridForeground[0].length/10)+(gridForeground[0].length/10)));
+            int width = (int)((Math.random()*(gridForeground.length/sizeOfRooms))+(gridForeground.length/sizeOfRooms));
+            int height = (int)((Math.random()*(gridForeground[0].length/sizeOfRooms)+(gridForeground[0].length/sizeOfRooms)));
             int x = (int)(Math.random()*(gridForeground.length-width));
             int y = (int)(Math.random() * (gridForeground[0].length-height));
             Room room =  new Room(x,y,width,height);
@@ -82,6 +88,13 @@ public class DungeonGenerator{
         int roomnumber = (int)(Math.random()*(amountOfRooms-1));
         gridUnits.add(new Player(rooms.get(roomnumber).getCenterX()*Gamepanel.getGRIDSIZE(),rooms.get(roomnumber).getCenterY()*Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene));
         System.out.println(rooms.get(roomnumber).getCenterX());
+        for(int i = 0; i < gridObstacles.length;i++){
+            for(int j = 0; j < gridObstacles[i].length;j++){
+                if(i == 0 || j == 0 || i == gridObstacles.length-1 || j == gridObstacles[i].length-1){
+                    gridObstacles[i][j] = new Obstacle(i,j,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene,Pictures.getSprite('O',0));
+                }
+            }
+        }
     }
 
     public void addRoomToGrid(Room room){

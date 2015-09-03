@@ -5,8 +5,11 @@ public class Gamepanel extends JPanel{
     private final static int GRIDSIZE = 48;
     private Scene scene;
     private int verschiebungX,verschiebungY;
+    private static int width,height;
     public Gamepanel(int width,int height){
         setSize(width,height);
+        this.width = width;
+        this.height = height;
         setBackground(Color.BLACK);
         addKeyListener(new Controller(this));
         new Pictures(); 
@@ -48,4 +51,11 @@ public class Gamepanel extends JPanel{
         return GRIDSIZE;
     }
     
+    public static int getW(){
+        return width;
+    }
+    
+    public static int getH(){
+        return height;
+    }
 }
