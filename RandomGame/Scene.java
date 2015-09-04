@@ -45,6 +45,10 @@ public abstract class Scene{
         units.add(unit);
     }
     
+    public void addUnit(int pos,Unit unit){
+        units.add(pos,unit);
+    }
+    
     public Background getBackground(){
         return background;
     }

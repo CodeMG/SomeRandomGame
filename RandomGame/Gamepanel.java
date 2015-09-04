@@ -6,6 +6,7 @@ public class Gamepanel extends JPanel{
     private Scene scene;
     private int verschiebungX,verschiebungY;
     private static int width,height;
+    private static boolean debugMode;
     public Gamepanel(int width,int height){
         setSize(width,height);
         this.width = width;
@@ -13,7 +14,7 @@ public class Gamepanel extends JPanel{
         setBackground(Color.BLACK);
         addKeyListener(new Controller(this));
         new Pictures(); 
-        new SceneManager();
+        new SceneManager(this);
         scene = SceneManager.getScenes().get(0);
         new Gameloop(this);
         verschiebungX = -(int)(scene.getPlayer().getX()-(8*Gamepanel.getGRIDSIZE()));
@@ -23,6 +24,7 @@ public class Gamepanel extends JPanel{
     public void berechnen(){
         verschiebungX = -(int)(scene.getPlayer().getX()-(8*Gamepanel.getGRIDSIZE()));
         verschiebungY = -(int)(scene.getPlayer().getY()-(6*Gamepanel.getGRIDSIZE()));
+        System.out.println(verschiebungX + "/" + verschiebungY);
         getPlayer().calculate();
     }
     
@@ -47,6 +49,10 @@ public class Gamepanel extends JPanel{
         return scene;
     }
     
+    public void setScene(Scene scene){
+        this.scene = scene;
+    }
+    
     public static int getGRIDSIZE(){
         return GRIDSIZE;
     }
@@ -57,5 +63,9 @@ public class Gamepanel extends JPanel{
     
     public static int getH(){
         return height;
+    }
+    
+    public static boolean getDebugMode(){
+        return debugMode;
     }
 }

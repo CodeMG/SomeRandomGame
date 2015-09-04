@@ -30,4 +30,6 @@ public abstract class Drawobject{
     public abstract void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY);
         
     public abstract void calculate();
+    
+    public abstract void onCollision(Unit unit,int futureX,int futureY);
 }

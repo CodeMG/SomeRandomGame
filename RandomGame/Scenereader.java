@@ -5,7 +5,7 @@ public class SceneReader{
     public SceneReader(){
     }
 
-    public Overworld createScene(String verz){
+    public static Overworld createScene(String verz){
         Overworld level = new Overworld();
 
         try {
@@ -22,13 +22,15 @@ public class SceneReader{
 
                     switch(read){
                         case 'F':
-                        level.addForeground(new Foreground(x,y,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),level,Pictures.getSprite(read,readZahl)));
+                        level.addForeground(new Foreground((int)(x/Gamepanel.getGRIDSIZE()),(int)(y/Gamepanel.getGRIDSIZE()),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),level,Pictures.getSprite(read,readZahl)));
                         case 'S':
                         switch(readZahl){
-
+                            case 0:level.addUnit(0,new Player(x,y,Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),(Scene)level));
+                            break;
                         }
                         break;
-                        case 'E':
+                        case 'O':
+                        level.addObstacles(new Obstacle((int)(x/Gamepanel.getGRIDSIZE()),(int)(y/Gamepanel.getGRIDSIZE()),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),level,Pictures.getSprite(read,readZahl)));
                         break;
                         case 'B':
                         break;
@@ -40,7 +42,7 @@ public class SceneReader{
             }
 
         } catch (FileNotFoundException e) {}
-
+        
         return level;
     }
 }

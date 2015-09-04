@@ -10,12 +10,16 @@ public class Foreground extends Drawobject{
     
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){
         g.drawImage(image,(int)((x)*width)+verschiebungX,(int)((y)*height)+verschiebungY,(int)(width),(int)(height),panel);
-        
+        System.out.println(y*height);
         //g.setColor(Color.GRAY);
-        //g.fillRect((int)x,(int)y,2,2);
+        //g.fillRect((int)((x)*width)+verschiebungX,(int)((y)*height)+verschiebungY,(int)(width),(int)(height));
     }
     
     public void calculate(){
+        
+    }
+    
+    public void onCollision(Unit unit,int futureX,int futureY){
         
     }
 }

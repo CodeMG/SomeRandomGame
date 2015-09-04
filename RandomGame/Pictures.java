@@ -7,6 +7,7 @@ public class Pictures{
     private static char[] speicherCodes;
     private static BufferedImage bilder[][],sprites[][][][];// 4 DIMENSIONEN!!!!!!
     private static BufferedImage forestBackground;
+    private static BufferedImage woodenHouse;
     public Pictures(){
         File dir = new File("Bilder");
         ordner = dir.list(new FilenameFilter() {
@@ -51,16 +52,17 @@ public class Pictures{
 
         for(int i = 0;i < sprites.length;i++){
             for(int j = 0; j < sprites[i].length;j++){
-                sprites[i][j] = new BufferedImage[bilder[i][j].getHeight()/64][bilder[i][j].getWidth()/64];
+                sprites[i][j] = new BufferedImage[bilder[i][j].getHeight()/32][bilder[i][j].getWidth()/32];
                 for(int w = 0; w < sprites[i][j].length;w++){
                     for(int k = 0; k < sprites[i][j][w].length;k++){
-                        sprites[i][j][w][k] = bildZerlegen(bilder[i][j],k*64,w*64,64,64);
+                        sprites[i][j][w][k] = bildZerlegen(bilder[i][j],k*32,w*32,32,32);
                     }
                 }
             }
         }
         
         forestBackground = bildHinzufuegen("Bilder//Background//forestBackground.png");
+        woodenHouse = bildHinzufuegen("Bilder//BiggerThings//house.png");
     }
 
     public BufferedImage bildHinzufuegen(String pfad){
@@ -138,6 +140,10 @@ public class Pictures{
 
     public static BufferedImage getBackgroundForest(){
         return forestBackground;
+    }
+    
+    public static BufferedImage getHouseWooden(){
+        return woodenHouse;
     }
     
 }

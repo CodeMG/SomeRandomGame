@@ -20,7 +20,7 @@ public class Minimap{
     public void zeichnen(Graphics g,JPanel panel){
         g.setColor(Color.BLACK);
         g.fillRect(x,y,width,height);
-        g.setColor(Color.WHITE);
+        g.setColor(Color.GRAY);
         for(int i = 0; i < obstacles.size();i++){
             g.drawRect((int)(x+obstacles.get(i).getX()*2),(int)(y+obstacles.get(i).getY()*2),(int)2,(int)2);
         }

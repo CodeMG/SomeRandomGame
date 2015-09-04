@@ -5,4 +5,6 @@ comment1.params=g\ panel\ verschiebungX\ verschiebungY
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
 comment2.params=
 comment2.target=void\ calculate()
-numComments=3
+comment3.params=unit\ futureX\ futureY
+comment3.target=void\ onCollision(Unit,\ int,\ int)
+numComments=4

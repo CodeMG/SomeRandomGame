@@ -1,10 +1,10 @@
 #BlueJ class context
-comment0.params=scene\ image
-comment0.target=Background(Scene,\ java.awt.image.BufferedImage)
+comment0.params=x\ y\ width\ height\ scene\ toLoad
+comment0.target=SceneLoader(double,\ double,\ double,\ double,\ Scene,\ Scene)
 comment1.params=g\ panel\ verschiebungX\ verschiebungY
 comment1.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
 comment2.params=
 comment2.target=void\ calculate()
-comment3.params=unit\ futureX\ futureY
-comment3.target=void\ onCollision(Unit,\ int,\ int)
+comment3.params=unit
+comment3.target=void\ onCollision(Unit)
 numComments=4

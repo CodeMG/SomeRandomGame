@@ -14,4 +14,8 @@ public class Special extends Drawobject{
     public void calculate(){
         
     }
+    
+    public void onCollision(Unit unit,int futureX,int futureY){
+        
+    }
 }

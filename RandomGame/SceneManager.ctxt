@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=SceneManager()
+comment0.params=panel
+comment0.target=SceneManager(Gamepanel)
 comment1.params=
 comment1.target=java.util.ArrayList\ getScenes()
-numComments=2
+comment2.params=scene
+comment2.target=void\ load(Scene)
+numComments=3

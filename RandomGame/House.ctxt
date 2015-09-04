@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=x\ y\ width\ height\ scene\ image
+comment0.target=House(double,\ double,\ double,\ double,\ Scene,\ java.awt.image.BufferedImage)
+comment1.params=unit\ futureX\ futureY
+comment1.target=void\ onCollision(Unit,\ int,\ int)
+numComments=2
