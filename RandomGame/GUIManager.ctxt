@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GUIManager()
+comment1.params=
+comment1.target=GUIManager\ get()
+comment2.params=x\ y\ width\ height\ text
+comment2.target=void\ openTextWindow(int,\ int,\ int,\ int,\ java.lang.String)
+comment3.params=e
+comment3.target=void\ removeElement(GUIElement)
+comment4.params=key
+comment4.target=void\ type(java.awt.event.KeyEvent)
+comment5.params=g\ panel
+comment5.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
+numComments=6

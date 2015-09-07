@@ -5,12 +5,12 @@ public class Controller implements KeyListener{
     public Controller(Gamepanel panel){
         this.panel = panel;
     }
-    
+
     public void keyReleased(KeyEvent e){
         Player player = panel.getPlayer();
         if(player != null){
             if(e.getKeyCode() == KeyEvent.VK_D){
-               
+
             }
             else if(e.getKeyCode() == KeyEvent.VK_A){
                 //player.setLinks(false);
@@ -23,27 +23,33 @@ public class Controller implements KeyListener{
             }
         }
     }
-    
+
     public void keyPressed(KeyEvent e){
         Player player = panel.getPlayer();
-        if(player != null){
-            if(e.getKeyCode() == KeyEvent.VK_D){
-               player.moveRight();
+        if(Gamepanel.getDrawMode() && Gamepanel.getCalculateMode()){
+            if(player != null){
+                if(e.getKeyCode() == KeyEvent.VK_D){
+                    player.moveRight();
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_A){
+                    player.moveLeft();
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_W){
+                    player.moveUp();
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_S){
+                    player.moveDown();
+                }
             }
-            else if(e.getKeyCode() == KeyEvent.VK_A){
-               player.moveLeft();
-            }
-            else if(e.getKeyCode() == KeyEvent.VK_W){
-               player.moveUp();
-            }
-            else if(e.getKeyCode() == KeyEvent.VK_S){
-               player.moveDown();
+        }
+        else if(!Gamepanel.getDrawMode()){
+            if(player != null){
+                GUIManager.get().type(e);
             }
         }
     }
-    
+
     public void keyTyped(KeyEvent e){
-        
     }
-    
+
 }

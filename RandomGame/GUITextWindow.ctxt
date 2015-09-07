@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=x\ y\ width\ height\ text
+comment0.target=GUITextWindow(int,\ int,\ int,\ int,\ java.lang.String)
+comment1.params=text
+comment1.target=void\ textAnalyser(java.lang.String)
+comment2.params=key
+comment2.target=void\ type(java.awt.event.KeyEvent)
+comment3.params=g\ panel
+comment3.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
+comment4.params=
+comment4.target=void\ calculate()
+numComments=5

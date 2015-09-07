@@ -5,6 +5,7 @@ public class SceneManager{
     private SceneReader reader;
     private static Gamepanel panel;
     public SceneManager(Gamepanel panel){
+        
         this.panel = panel;
         scenes = new ArrayList<Scene>();
         

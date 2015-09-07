@@ -87,7 +87,6 @@ public class DungeonGenerator{
         }
         int roomnumber = (int)(Math.random()*(amountOfRooms-1));
         gridUnits.add(new Player(rooms.get(roomnumber).getCenterX()*Gamepanel.getGRIDSIZE(),rooms.get(roomnumber).getCenterY()*Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),Gamepanel.getGRIDSIZE(),scene));
-        System.out.println(rooms.get(roomnumber).getCenterX());
         for(int i = 0; i < gridObstacles.length;i++){
             for(int j = 0; j < gridObstacles[i].length;j++){
                 if(i == 0 || j == 0 || i == gridObstacles.length-1 || j == gridObstacles[i].length-1){
