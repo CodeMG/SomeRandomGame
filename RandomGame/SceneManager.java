@@ -12,6 +12,7 @@ public class SceneManager{
         reader = new SceneReader();
         Scene test = reader.createScene("level1.lvl");
         test.addObstacles(new WoodenHouse(0,0,48*5,48*4,test,Pictures.getHouseWooden()));
+        test.addUnit(new Steve(5,5,48,48,test));
         scenes.add(test);
         //scenes.add(new Dungeon(50,50,5,10));
     }

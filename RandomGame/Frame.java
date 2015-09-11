@@ -4,6 +4,8 @@ import java.awt.*;
 public class Frame extends JFrame{
     private Gamepanel panel;
     private Mainmenu menu;
+    private static int width;
+    private static int height;
     public Frame(){
         pack();
         setSize(64*13,64*10);
@@ -18,7 +20,8 @@ public class Frame extends JFrame{
         int frameHeight = getHeight() - decorationHeight;
         
         setSize((64*13)+decorationWidth,(64*10)+decorationHeight);
-        
+        width = (64*13)+decorationWidth;
+        height = (64*10)+decorationHeight;
         //panel = new Gamepanel(64*13,64*10);
         //add(panel);
         
@@ -29,6 +32,12 @@ public class Frame extends JFrame{
         setVisible(true);
     }
     
+    public static int getSizeWidth(){
+        return width;
+    }
     
+    public static int getSizeHeight(){
+        return height;
+    }
     
 }

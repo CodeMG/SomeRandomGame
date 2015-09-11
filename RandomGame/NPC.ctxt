@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=x\ y\ width\ height\ scene
 comment0.target=NPC(double,\ double,\ double,\ double,\ Scene)
-comment1.params=
-comment1.target=void\ talk()
-numComments=2
+comment1.params=unit\ futureX\ futureY
+comment1.target=void\ onCollision(Unit,\ int,\ int)
+comment2.params=
+comment2.target=void\ talk()
+numComments=3

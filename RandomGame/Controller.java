@@ -42,7 +42,7 @@ public class Controller implements KeyListener{
                 }
             }
         }
-        else if(!Gamepanel.getDrawMode()){
+        else if(!Gamepanel.getCalculateMode()){
             if(player != null){
                 GUIManager.get().type(e);
             }

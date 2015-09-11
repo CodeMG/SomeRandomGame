@@ -19,13 +19,13 @@ public class GUIManager{
     
     public void openTextWindow(int x,int y,int width,int height,String text){
         gui.add(new GUITextWindow(x,y,width,height,text));
-        Gamepanel.changeDrawMode(false);
+        Gamepanel.changeCalculateMode(false);
     }
     
     public void removeElement(GUIElement e){
         gui.remove(e);
         if(gui.size() == 0){
-            Gamepanel.changeDrawMode(true);
+            Gamepanel.changeCalculateMode(true);
         }
     }
     

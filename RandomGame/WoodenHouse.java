@@ -13,7 +13,7 @@ public class WoodenHouse extends House{
         Rectangle door = new Rectangle((int)(x+48),(int)(y+(48*3)),48,48);
         if(rect.intersects(door)){
             SceneManager.load(inside);
-            GUIManager.get().openTextWindow(0,400,800,200,"*Entering a Wormhole*");
+            
         }
     }
     

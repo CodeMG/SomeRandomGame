@@ -44,8 +44,6 @@ public class Gamepanel extends JPanel{
             }
 
             scene.zeichnen(g,this,verschiebungX,verschiebungY);
-        }
-        else{
             GUIManager.get().zeichnen(g,this);
         }
         requestFocus();
@@ -83,7 +81,7 @@ public class Gamepanel extends JPanel{
         draw = d;
     }
     
-    public static void chagneCalculateMode(boolean c){
+    public static void changeCalculateMode(boolean c){
         calculate = c;
     }
     

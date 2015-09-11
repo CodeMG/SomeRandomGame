@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=x\ y\ width\ height\ scene
+comment0.target=Steve(double,\ double,\ double,\ double,\ Scene)
+comment1.params=
+comment1.target=void\ talk()
+comment2.params=g\ panel\ verschiebungX\ verschiebungY
+comment2.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel,\ int,\ int)
+numComments=3

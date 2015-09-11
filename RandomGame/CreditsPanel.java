@@ -53,7 +53,7 @@ public class CreditsPanel extends JPanel implements ActionListener{
         }
         y-=1;
         try{
-            Thread.sleep(10);
+            Thread.sleep(20);
         }catch(Exception e){
             
         }
