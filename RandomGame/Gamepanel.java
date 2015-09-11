@@ -20,9 +20,10 @@ public class Gamepanel extends JPanel{
         new Pictures(); 
         manager = new SceneManager(this);
         scene = SceneManager.getScenes().get(0);
-        new Gameloop(this);
         verschiebungX = -(int)(scene.getPlayer().getX()-(8*Gamepanel.getGRIDSIZE()));
         verschiebungY = -(int)(scene.getPlayer().getY()-(6*Gamepanel.getGRIDSIZE()));
+        setVisible(true);
+        new Gameloop(this);
     }
 
     public void berechnen(){
