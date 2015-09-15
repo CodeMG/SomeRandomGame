@@ -1,33 +1,25 @@
-
-/**
- * Write a description of class SoundPanel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class SoundPanel
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class SoundPanel
-     */
-    public SoundPanel()
-    {
-        // initialise instance variables
-        x = 0;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class SoundPanel extends JPanel implements ActionListener{
+    private OptionPanel container;
+    private Button back;
+    public SoundPanel(int width,int height,OptionPanel container){
+        setSize(width,height);
+        this.container = container;
+        
+        int buttonWidth = (int)(width*0.20);
+        int buttonHeight = (int)(height * 0.05);
+        
+        back = new Button((int)((width*0.1)-(buttonWidth*0.5)),(int)((height*0.9)-(buttonHeight*0.5)),buttonWidth,buttonHeight,"Back",this);
+        back.addActionListener(this);
+        add(back);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource() == back){
+            container.showChoosePanelAndRemove(this);
+        } 
     }
+    
 }

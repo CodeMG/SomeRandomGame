@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=width\ height\ container
-comment0.target=SoundPanel(int,\ int,\ OptionPanel)
+comment0.target=OptionChoosePanel(int,\ int,\ OptionPanel)
 comment1.params=e
 comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
 numComments=2

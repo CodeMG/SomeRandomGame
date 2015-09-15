@@ -25,7 +25,6 @@ public class Frame extends JFrame{
         //panel = new Gamepanel(64*13,64*10);
         //add(panel);
         
-        
         menu = new Mainmenu(64*13,64*10);
         menu.setVisible(true);
         add(menu);

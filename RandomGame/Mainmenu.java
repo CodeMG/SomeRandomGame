@@ -33,7 +33,8 @@ public class Mainmenu extends JPanel{
 
     public void showOptions(){
         remove(menu);
-        //options = new OptionPanel(getWidth(),getHeight(),this);
+        options = new OptionPanel(getWidth(),getHeight(),this);
+        add(options);
         repaint();
     }
 

@@ -1,2 +1,14 @@
 #BlueJ class context
-numComments=0
+comment0.params=width\ height\ container
+comment0.target=OptionPanel(int,\ int,\ Mainmenu)
+comment1.params=
+comment1.target=void\ showControl()
+comment2.params=
+comment2.target=void\ showSound()
+comment3.params=
+comment3.target=void\ showSize()
+comment4.params=panel
+comment4.target=void\ showChoosePanelAndRemove(javax.swing.JPanel)
+comment5.params=panel
+comment5.target=void\ showMenuAndRemove(javax.swing.JPanel)
+numComments=6
