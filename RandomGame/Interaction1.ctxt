@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=x\ y\ width\ height
+comment0.target=Interaction1(int,\ int,\ int,\ int)
+comment1.params=e
+comment1.target=void\ type(java.awt.event.KeyEvent)
+comment2.params=
+comment2.target=void\ calculate()
+comment3.params=g\ panel
+comment3.target=void\ zeichnen(java.awt.Graphics,\ javax.swing.JPanel)
+comment4.params=
+comment4.target=void\ interactionLoad()
+numComments=5

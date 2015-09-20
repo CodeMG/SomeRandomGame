@@ -8,7 +8,9 @@ public class Steve extends NPC{
     }
     
     public void talk(){
-        GUIManager.get().openTextWindow(0,(int)(Frame.getSizeHeight()*0.8),Frame.getSizeWidth(),(int)(Frame.getSizeHeight()*0.2),"Hi, my name ist Steve.");
+        //GUIManager.get().openTextWindow(0,(int)(Frame.getSizeHeight()*0.8),Frame.getSizeWidth(),(int)(Frame.getSizeHeight()*0.2),"Hi, my name ist Steve.How can I help you my friend?");
+        GUIManager.get().openInteraction(0, (int)(Frame.getSizeHeight()*0.8),Frame.getSizeWidth(),(int)(Frame.getSizeHeight()*0.2), 1);
+        
     }
     
     public void zeichnen(Graphics g,JPanel panel,int verschiebungX,int verschiebungY){

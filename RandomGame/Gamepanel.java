@@ -32,6 +32,9 @@ public class Gamepanel extends JPanel{
             verschiebungY = -(int)(scene.getPlayer().getY()-(6*Gamepanel.getGRIDSIZE()));
             getPlayer().calculate();
         }
+        else{
+            GUIManager.get().calculate();
+        }
     }
 
     public void paintComponent(Graphics g){

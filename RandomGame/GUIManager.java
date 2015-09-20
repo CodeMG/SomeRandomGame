@@ -17,15 +17,40 @@ public class GUIManager{
         return manager;
     }
     
-    public void openTextWindow(int x,int y,int width,int height,String text){
-        gui.add(new GUITextWindow(x,y,width,height,text));
+    public GUITextWindow openTextWindow(int x,int y,int width,int height,String text){
+        GUITextWindow w = new GUITextWindow(x,y,width,height,text);
+        gui.add(w);
         Gamepanel.changeCalculateMode(false);
+        return w;
+    }
+    
+    public GUIChooseWindow openChooseWindow(int x,int y,String... options){
+        GUIChooseWindow w = new GUIChooseWindow(x,y,options);
+        gui.add(w);
+        Gamepanel.changeCalculateMode(false);
+        return w;
+    }
+    
+    public GUITextInteractionScript openInteraction(int x,int y,int width,int height,int interaction){
+        if(interaction == 1){
+            Interaction1 i = new Interaction1(x,y,width,height);
+            gui.add(i);
+            Gamepanel.changeCalculateMode(false);
+            return i;
+        }
+        return null;
     }
     
     public void removeElement(GUIElement e){
         gui.remove(e);
         if(gui.size() == 0){
             Gamepanel.changeCalculateMode(true);
+        }
+    }
+    
+    public void calculate(){
+        for(int i = 0; i < gui.size();i++){
+            gui.get(i).calculate();
         }
     }
     
